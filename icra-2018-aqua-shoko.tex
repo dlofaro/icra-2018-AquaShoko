@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{graphicx}
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multicol}
+
+
+\title{\LARGE \bf
+Underwater Legged Robot for Low-Signature, Underwater Exploration% for the MDS Robot
+}
+
+
+\author{Alberto Perez Nunez$^{1}$ and Daniel M. Lofaro$^{2}$% <-this % stops a space
+\thanks{$^{1}$Alberto Perez is a student in the Electrical Engineering Department, George Mason University.
+{\tt\small (E-mail: apereznu@gmu.edu}}%
+%        {\tt\small (E-mail: cward13@gmu.edu}}%
+\thanks{$^{2}$Daniel Lofaro holds a Faculty Appointment with the Laboratory for Autonomous Systems Research (LASR) at the U.S. Naval Research Laboratory (NRL) in Washington DC, USA and is faculty with the Department of Electrical and Computer Engineering, George Mason University, Fairfax, VA, USA.
+	{\tt\small (Tel : +1-202-378-8964; E-mail: daniel.lofaro@nrl.navy.mil, dan@danLofaro.com}}%
+%        {\tt\small (E-mail: don.sofge@nrl.navy.mil}}%
+}
+
+%\thanks{*This work was performed in part at the Naval Research Laboratory and was funded by the Office of Naval Research under grant number N0001416WX01272, Mobile Autonomous Navy Teams for Information Surveillance and Search (MANTISS).  In addition this work was supported by NRL-LASR, ONR-SFRP, and DASL@GMU}% <-this % stops a space
+ 
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\input{Introduction.tex}
+
+
+\section{Background}\label{sec:background}
+\input{Background.tex}
+
+\section{Methodology}
+\input{Methodology.tex}
+
+\section{Testing}
+\input{Testing.tex}
+
+\section{Results}
+\input{Results.tex}
+
+\section{Conclusion}
+\input{Conclusion.tex}
+
+\section*{Acknowledgements}
+\input{Acknowledgements.tex}
+
+
+% references section
+\bibliographystyle{IEEEtran}
+\bibliography{aquashoko.bib,lofaro.bib}
+
+
+\end{document}

@@ -1,0 +1,193 @@
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaPod-evolution.png}
+\caption{Waterproof actuator enclosure design iteration }
+\label{fig:pod evolution}
+\end{figure}
+
+
+\subsection{IP68 Waterproof Enclosure}
+An Aquapod is a waterproof enclosure design to house an MX-106 actuator to create a revolute joint. An Aquapod is to function as platform to build submersible robotic structures.
+Requirements: 
+\begin{itemize}
+    \item Actuators cannot be modified 
+    
+    \item Ability for actuators to be daisy chained
+
+    \item The bearing spun rough after test
+
+    \item Waterproof to a minimum depth of 3 meters
+
+    \item A compact package is required to maximize joint travel
+
+    \item Fresh water corrosion resistant
+    
+\end{itemize}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaPod-exploded.png}
+\caption{Exploited view of waterproof actuator enclosure }
+\label{fig:pod exploted}
+\end{figure}
+
+
+This section describes the materials and components used for the Aquapod system.
+
+
+\subsubsection{Actuators}
+The MX-106T is a smart actuator which was chosen for its compact package and high torque capabilities. 
+Specifications for MX-106T are listed below: 
+\begin{itemize}
+    \item Transistor-transistor Logic serial (TTl) communication 
+    
+    \item Recommended voltage: 12V
+
+    \item No load speed at 12V: 45rpm
+
+    \item Stall torque at 12V: 8.4 Nm
+
+\end{itemize}
+
+\subsubsection{Pod-Top}
+Pod-Tops are intended to be the load bearing member. The actuator is bolted to the Pod-Top. The Pod-Top needs to house the shaft seal for the output shaft. The Pod-Top also needs to be able to transfer heat from the actuator to the environment. 
+6061 Aluminum was chosen for its combination of low weight, high strength, high thermal conductivity, and machinability. To reduce production time, the Pod-Top geometry shape was developed to reduce waste stock.
+
+\subsubsection{Output Shaft Seal}
+Heavy duty, double-lip rotary seal is made to prevent water and other contaminates from entering the enclose. The rotary seal was working temperature range of 234K to 372K. The seal is rated for a pressure differential of 630kPa at 0 m/s and 344kPa at 5m/s. 
+
+
+\subsubsection{Bearing Housing}
+Bearing Housing secures the Output shaft bearing to the Pod-Top. Its job is to transfer the radial load from the bearing to the Pod-Top. The reason for using a separate bearing housing is to position the bearing as close to the load as possible to prevent the output shaft from pivoting and placing stress on the actuator.
+6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+
+\subsubsection{Output Shaft Bearing}
+Acetal bearing with stainless steel balls are used for their corrosion Resistance. Bearings have a static load rating of 244N and a dynamic load rating of 177N. 
+
+\subsubsection{Pod-Bottom}
+Pod-Bottoms mate with the Pod-Tops to create a water proof enclosure for the actuator. Pod-Bottoms protect the actuator from impacts. Pod-Bottoms are equipped with two panel mounted connectors to supply the actuator with power/ground and data connection. There are two version of Pod-Bottom one with link attachment points one without. The additional attachment points are used to increase structural rigidity. Pod-Bottoms are sealed with room temperature vulcanizing (RTV) silicone sealant and use a tight bolt pattern to ensure even pressure distribution between the Pod-Bottom and Pod-Top mating surfaces.
+High Density Polyethylene was chosen for low weight, impact resistance and machinability. 
+
+\subsubsection{IP68 Electrical Connectors}
+Aquapods are design to use Bulgin 4000 series electrical connectors. 4000 series connectors are ideal due to their small size and ability to perform in harsh environments.  
+
+
+\subsubsection{Output Shaft}
+The output shaft transfers rotary motion from the actuator inside the Aquapod to the horn adapter outside the Aquapod.The output shaft transfers rotary motion from the actuator inside the Aquapod to the horn adapter outside the Aquapod.
+
+\subsubsection{Horn adapter}
+The Horn Adapter allows to connect the output shaft to links. The horn adaptor utilizes the original hole pattern of Dynamixels allowing for the possibility to interchange with OEM components.
+Horn Adaptors are keyed into the Output Shaft and a bolt secures the horn against axial loading. 
+
+\subsubsection{Fasteners}
+Screws made from 18-8 stainless steel were chosen for their corrosion resistance. Socket head screws where chosen for ease of assembly in tight spaces and countered-bored holes.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-render-standPose.png}
+\caption{Rendering of AquaShoko Version 3.3 standing pose}
+\label{fig:shoko stand pose}
+\end{figure}
+
+
+\subsection{Submersible Quadruped}
+AquaShoko is a quadruped built around the Aquapod platform which is submersible in fresh water. AquaShoko has the capability to traverse from a dry land environment to an underwater one. AquaShoko can orientate it itself by positioning its limbs to shift its center of buoyancy as it descends to the bottom of a pool. Each leg of has three degrees of freedom comprised of one yaw and two pitch joints. Currently each leg is identical and they’re place 90 degrees away from each other about the vertical center axis. 
+
+
+This section describes the materials and components used for the quadruped named AquaShoko.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-exploded-assembly.png}
+\caption{Exploded view of AquaShoko Components}
+\label{fig:shoko exploded}
+\end{figure}
+
+
+\subsubsection{Frame}
+AquaShoko uses two Frame members to connect the four legs together. The first frame secures the Pod-Tops together and a second one securing the Pod Bottoms together. At the center of each Frame are attachment holes to which components, such as sensor packs and batteries, can be secured to if needed. Carbon fiber laminate was chosen for its high stiffness and height weight.
+
+\subsubsection{Horn-to-Horn}
+The Horn-To-Horn allows for the two Aquapods in closely to create a joint with two perpendicular degrees of freedom.
+6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+
+\subsubsection{Horn-to-Tube}
+Horn-to-Tube allows the Horn Adaptor of the Aquapod to connect to a circular tube.
+6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+
+\subsubsection{Pod-Top-to-Tube}
+Pod-Top-to-Tube allows the Pod-Top of the Aquapod to connect to a circular tube.  
+6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+
+\subsubsection{Femur and Tibia}
+The Femur is a rod which connects the two pitch joints. The Tibia is the final link connected to the second pitch joint. Solid Nylon 6/6 rod in one inch on diameter was chosen for its high strength and low cost.
+
+\subsubsection{Foot}
+Slip-on rubber feet to prevent wear on the Tibia and improve traction for walking. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-exploded-leg.png}
+\caption{Exploded view of leg components:(a)Aquapod;(b)Horn-to-Horn;(c)Pod-Top-to-Tube;(d)Femur;(e)Horn-to-Tube;(f)Tibia;and (g)Foot}
+\label{fig:leg exploded}
+\end{figure}
+ 
+
+\subsection{Power/Control Box}
+The Power/Control Box is built around a Nema 4X rated enclosure to protect contents from possible slashing which occur around pools. The Power/Control Box is comprised of a Raspberry Pi2, DYN2USB adapter, power block, emergency button, key switch, Four cable outputs one cable input, a 12v to 5v power supply, and two 20 amp fuses. The power control box accepts a 12v input from a dell 120v AC to 12v power source.
+The Raspberry can be connected to via local wifi network to operate. 
+A DYN2USB adapter is used to connect the Raspberry Pi2 USB serial output to the TTL Dynamixel. 
+The Power Block is used to distribute 12v power/ground to the cable outputs.
+The emergency stop button is slash down resistant; it is used to cut power to all cable outputs in case of emergency.
+The keyswitch switch is splash down resistant and is used to activate the dell power supply. The key switch prevents use of the robot by unauthorized persons. The 12v to 5v power source is used to power the Raspberry Pi2 and the TTL signal pull up resistor.
+The two 20amp fuses protect the actuators.
+
+
+
+\subsection{Power and Data Umbilical}
+Three contact continuous flex cable rated for 10 amp was used to daisy chain connect the actuators and build the umbilical. IP68/IP69k rated water proof connectors were used.
+The umbilical, which supplies power/grounds and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in abrasion resistant sleeving to protect the cables if the umbilical is dragged across the ground. Due to the high 1.1ohm resistance of the umbilical and lower power of the Pi2 a pull up resistor was required to establish reliable connection. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot2-photo-complete.JPG}
+\caption{AquaShoko version 3.2 complete assembly }
+\label{fig:shoko 3dot2}
+\end{figure}
+
+\subsection{Evaluating Maximum Joint Load Due To Gravity}
+It is required for AquaShoko to be capable to walking on dry land for shore to near shore use. The maximum torque load due to gravity will occur when the leg is posed so the center of mass and the first pitch both lie on the same plane normal to the gravity vector. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-legCOM.png}
+\caption{Maximum joint load on leg due to gravity:(a)Second pitch joint;(b)Calculated center of mass;(c)First pitch joint;(d)Direction of gravity;(e)Reaction torque}
+\label{fig:shoko 3dot2}
+\end{figure}
+
+
+\begin{align}\label{eq:head}
+    T = FL   \\
+    F = MG
+\end{align}
+\begin{align*}
+    L & = 0.271 m         \\
+    M & = 1.81 kg       \\
+    G & = 9.81 m/s^2    \\
+\end{align*}
+
+The torque on the first pitch joint was calculated to be 4.81Nm which is 57.3\% of the of the actuators stall torque at 12V. This result is favorable because full range of motion is maintained when AquaShoko is not submerged.
+
+\subsection{Finite Element Quadruped Structural Analysis}
+Finite element stress and strain analysis was used to study the performance capabilities of the quadruped design structure. 
+The following section will describe and discuss the results for structural studies done using Autodesk Fusion 360 simulation tool.
+
+\subsubsection{Effector Point Load With Leg In Stand Pose }
+It was desired to know how a leg posed in the standing position was subjected to a point load at the end effector. Using the stall torque of the actuator about the yaw joint a force of 24n was calculated and applied to the bottom of the the feet in the simulation. The Pod-Top of the yaw joint Aquapod was rigidly anchored. 
+Interfering bodies where removed from the simulation such as electrical connectors and fasteners. All contacts where assumed to be bonded and contact tolerance was set to 0.5mm.
+
+
+\subsection{Validating Finite Element Analysis Results}
+Analytically engineering techniques where utilized to compare against the results of the finite element analysis. This was done to ensure the finite element result are within reasonable range of expected values.
