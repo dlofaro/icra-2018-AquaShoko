@@ -1,10 +1,30 @@
 
+\subsection{Aquapod water resistance testing}
+
+
+\subsubsection{Shallow Submersion Test}
+Test the water resistance of Aquapod in a shallow body of water.
+Aquapod V3.1, without an actuator installed, was left in a 5 gallon bucket filled with tap water for a duration of 23/6/2017 12:30PM to 25/6/2017 12:30PM. 
+No evidence of water ingress into the Aquapod nor electrical connectors, concluding a successful shallow submersion test.
+
+Shallow Submersion Test observations:
+\begin{itemize}
+    \item Rust on the surface of black oxide steel hardware
+    
+    \item Rust on the surface of steel bearing
+
+    \item The bearing spun rough after test
+
+\end{itemize}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaPod-test-one-start.JPG}
 \caption{Aquapod version 3.1 moments after submersion}
 \label{fig:pod in bucket}
 \end{figure}
+
+
 
 \begin{figure}[h]
 \centering
@@ -14,34 +34,9 @@
 \end{figure}
 
 
-\subsection{Aquapod water resistance testing}
-
-
-\subsubsection{Shallow Submersion Test}
-Test water resistance of resistance of Aquapod in shallow water.
-Aquapod V3.1 without an actuator installed was left in a 5 gallon bucket filled with tap water from 23/6/2017 12:30PM to 25/6/2017 12:30PM. 
-Test was successful. No evidence of water ingress into the Aquapod or electrical connectors. 
-
-Bucket Test observations
-\begin{itemize}
-    \item Rust on the surface of black oxide steel hardware
-    
-    \item Rust on the surface of steel bearing. 
-
-    \item The bearing spun rough after test
-
-\end{itemize}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaPod-test-two-pressureCheck.JPG}
-\caption{Chamber internal gauge pressure during low pressure chamber test}
-\label{fig:test two pressure check}
-\end{figure}
-
 
 \subsubsection{Low Pressure Chamber Test}
-Aquapods are expected to reliably function at a depth of 3 meters. In order to simulate the depth a pressure chamber was was used. Using equation~\ref{eq:head} the gauge pressure at 3m head to be 29.4kPa(4.2psi)
+Aquapods are expected to function reliably at a depth of 3 meters. A pressure chamber was used in order to simulate the proper depth. Using equation~\ref{eq:head}, the gauge pressure at 3m head to be 29.4kPa (4.2psi).
 
 \begin{equation}\label{eq:head}
     P = \rho g h \\
@@ -53,31 +48,36 @@ Aquapods are expected to reliably function at a depth of 3 meters. In order to s
     h & = depth  \\
 \end{align*}
 
-A factor of safety of 2.5 or higher is desired for water resistance. A minimum pressure benchmark for a successful test was calculated to be 73.6kPa(10.7psi) which simulates a depth of 7.5m.
-The test took place on 27/6/2017 from 11:30am to 4:00pm which are the respective times of pressurization and depressurization.
-The pressure chamber filled with tap water and Aquapod V3.1 without an actuator installed was submerged inside.
-The source air pressure was initially adjusted to 241kPa(35psi) gauge and used initial pressurization of the chamber.
-The source air was disconnected from the chamber and a gauge was used to measure the pressure inside the chamber to be 103kPa(15psi). 
+A factor of safety of 2.5 or higher is desired for water resistance. A minimum pressure benchmark for a successful test was calculated to be 73.6kPa (10.7psi), which simulates a depth of 7.5m.
+The test took place on 27/6/2017 from 11:30am to 4:00pm, which are the respective times of pressurization and depressurization.
+The pressure chamber was filled with tap water, and then the Aquapod V3.1, without an actuator installed, was submerged inside.
+The source air pressure was initially adjusted to 241kPa (35psi) gauge and used initial pressurization of the chamber.
+The source air was disconnected from the chamber and a gauge was used to measure the pressure inside the chamber to be 103kPa (15psi). 
 The gauge was left connected for 5 minutes the pressure was observed to remained stable. 
-The source air was then adjusted to ~20psi gauge and left attached to the pressure chamber for the remainder of the test. 
-Wet spots where observed indicating minor leakage was around the top of the pressure chamber.
-No evidence of moisture inside the Aquapod or any of the electrical connectors. 
-Test proved the Aquapod is water resistant beyond the to a 7.5m depth which satisfies the desired factor of safety of 2.5.
-This test also suggests Aquapods maybe water resistant to or beyond 24m head, however due to the air leakage this claim cannot be confirmed and additional future test are required.
+The source air was then adjusted to 138kPa (20psi) gauge and left attached to the pressure chamber for the remainder of the test. 
+Wet spots where observed, indicating minor leakage occurred around the top of the pressure chamber; however, no evidence of moisture were found inside the Aquapod or any of the electrical connectors.
+The test proved the Aquapod is water resistant beyond the 7.5m depth, which satisfies the desired factor of safety of 2.5.
+This test also suggests Aquapods may be water resistant to or beyond 24m head; however, due to the air leakage, this claim cannot be confirmed and additional future testing is required.
 
-Low pressure chamber test observations
+Low pressure chamber test observations:
 \begin{itemize}
-    \item High pressure capable chamber is required for future tests
+    \item High pressure chamber is required for future tests
     
     \item Rust on the surface of steel bearing 
     
-    \item More tests are required to determine the water resistance limit Aquapods
+    \item More tests are required to determine the water resistance limit
 
     \item Design needs to be slightly modified for ease of dis-assembly
 
-    \item Due to difficulty during dis-assembly the mating surfaces of Pod-Bottom and Pod-Top were damaged
+    \item Due to difficulty during dis-assembly, the mating surfaces of Pod-Bottom and Pod-Top were damaged
     
     \item An Aquapod must be tested in accord to IP68 standard procedures 
     
 \end{itemize}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaPod-test-two-pressureCheck.JPG}
+\caption{Chamber internal gauge pressure during low pressure chamber test}
+\label{fig:test two pressure check}
+\end{figure}

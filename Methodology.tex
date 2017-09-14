@@ -7,14 +7,12 @@
 
 
 \subsection{IP68 Waterproof Enclosure}
-An Aquapod is a waterproof enclosure design to house an MX-106 actuator to create a revolute joint. An Aquapod is to function as platform to build submersible robotic structures.
+An Aquapod is a waterproof enclosure design to house an MX-106 actuator to create a revolute joint. An Aquapod is a platform to build submersible robotic structures.
 Requirements: 
 \begin{itemize}
-    \item Actuators cannot be modified 
+    \item Actuators remain unmodified 
     
-    \item Ability for actuators to be daisy chained
-
-    \item The bearing spun rough after test
+    \item Daisy chained capability
 
     \item Waterproof to a minimum depth of 3 meters
 
@@ -28,7 +26,7 @@ Requirements:
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaPod-exploded.png}
-\caption{Exploited view of waterproof actuator enclosure }
+\caption{Exploited view of waterproof actuator enclosure components: (a)Horn Adapter; (b)Bearing housing; (d)Output shaft bearing; (d)Pod-Top;(e)Output Shaft Seal; (f)Output Shaft; (g)Actuator; (h)Pod-Bottom; (i)IP68 electrical connectors }
 \label{fig:pod exploted}
 \end{figure}
 
@@ -55,33 +53,33 @@ Pod-Tops are intended to be the load bearing member. The actuator is bolted to t
 6061 Aluminum was chosen for its combination of low weight, high strength, high thermal conductivity, and machinability. To reduce production time, the Pod-Top geometry shape was developed to reduce waste stock.
 
 \subsubsection{Output Shaft Seal}
-Heavy duty, double-lip rotary seal is made to prevent water and other contaminates from entering the enclose. The rotary seal was working temperature range of 234K to 372K. The seal is rated for a pressure differential of 630kPa at 0 m/s and 344kPa at 5m/s. 
+Heavy duty, double-lip rotary seal is made to prevent water and other contaminates from entering the enclose. The rotary seals working temperature ranges from 234K to 372K and rated for a pressure differential of 630kPa at 0m/s and 344kPa at 5m/s. 
 
 
 \subsubsection{Bearing Housing}
 Bearing Housing secures the Output shaft bearing to the Pod-Top. Its job is to transfer the radial load from the bearing to the Pod-Top. The reason for using a separate bearing housing is to position the bearing as close to the load as possible to prevent the output shaft from pivoting and placing stress on the actuator.
-6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+Again, 6061 Aluminum was the preferred material, chosen for its combination of low weight, high strength, and machinability.
 
 \subsubsection{Output Shaft Bearing}
-Acetal bearing with stainless steel balls are used for their corrosion Resistance. Bearings have a static load rating of 244N and a dynamic load rating of 177N. 
+Acetal bearing, with stainless steel balls, are used for their corrosion resistance. Bearings have a static load rating of 244N and a dynamic load rating of 177N. 
 
 \subsubsection{Pod-Bottom}
-Pod-Bottoms mate with the Pod-Tops to create a water proof enclosure for the actuator. Pod-Bottoms protect the actuator from impacts. Pod-Bottoms are equipped with two panel mounted connectors to supply the actuator with power/ground and data connection. There are two version of Pod-Bottom one with link attachment points one without. The additional attachment points are used to increase structural rigidity. Pod-Bottoms are sealed with room temperature vulcanizing (RTV) silicone sealant and use a tight bolt pattern to ensure even pressure distribution between the Pod-Bottom and Pod-Top mating surfaces.
+Pod-Bottoms mate with the Pod-Tops to create a water-proof enclosure for the actuator, effectively protecting the components from exposure and impacts. Pod-Bottoms are equipped with two panel mounted connectors to supply the actuator with power/ground and data connection. There are two versions of Pod-Bottom: one with link attachment points and one without. The additional attachment points are used to increase structural rigidity. Pod-Bottoms are sealed with room temperature vulcanizing (RTV) silicone sealant and use a tight bolt pattern to ensure even pressure distribution between the Pod-Bottom and Pod-Top mating surfaces.
 High Density Polyethylene was chosen for low weight, impact resistance and machinability. 
 
 \subsubsection{IP68 Electrical Connectors}
-Aquapods are design to use Bulgin 4000 series electrical connectors. 4000 series connectors are ideal due to their small size and ability to perform in harsh environments.  
+Aquapods are design to use Bulgin 4000 series electrical connectors. The 4000 series connectors are ideal due to their small size and ability to perform in harsh environments. These connectors are rated to IP68/IP69k ingress and water-proof protection. 
 
 
 \subsubsection{Output Shaft}
-The output shaft transfers rotary motion from the actuator inside the Aquapod to the horn adapter outside the Aquapod.The output shaft transfers rotary motion from the actuator inside the Aquapod to the horn adapter outside the Aquapod.
+The output shaft transfers rotary motion from the actuator inside the Aquapod to the horn adapter outside the Aquapod.
 
-\subsubsection{Horn adapter}
-The Horn Adapter allows to connect the output shaft to links. The horn adaptor utilizes the original hole pattern of Dynamixels allowing for the possibility to interchange with OEM components.
-Horn Adaptors are keyed into the Output Shaft and a bolt secures the horn against axial loading. 
+\subsubsection{Horn Adapter}
+The Horn Adapter allows to connect the output shaft to links. The horn adapter utilizes the original hole pattern of Dynamixels allowing for the possibility to interchange with OEM components.
+The Horn Adapter is keyed into the Output Shaft to transfer rotary loads, where a bolt secures the horn against axial loading. 
 
 \subsubsection{Fasteners}
-Screws made from 18-8 stainless steel were chosen for their corrosion resistance. Socket head screws where chosen for ease of assembly in tight spaces and countered-bored holes.
+Screws comprised of 18-8 stainless steel were chosen for their corrosion resistance. Socket head screws where chosen for ease of assembly in tight spaces and countered-bored holes.
 
 \begin{figure}[h]
 \centering
@@ -92,8 +90,8 @@ Screws made from 18-8 stainless steel were chosen for their corrosion resistance
 
 
 \subsection{Submersible Quadruped}
-AquaShoko is a quadruped built around the Aquapod platform which is submersible in fresh water. AquaShoko has the capability to traverse from a dry land environment to an underwater one. AquaShoko can orientate it itself by positioning its limbs to shift its center of buoyancy as it descends to the bottom of a pool. Each leg of has three degrees of freedom comprised of one yaw and two pitch joints. Currently each leg is identical and they’re place 90 degrees away from each other about the vertical center axis. 
-
+AquaShoko is a quadruped built around the Aquapod platform which is submersible in fresh water. AquaShoko has the capability to traverse from a dry land environment to an underwater one. AquaShoko can orientate it itself by positioning its limbs to shift its center of buoyancy as it descends to the bottom of a body of water. Each leg has three degrees of freedom, comprised of one yaw and two pitch joints. Currently, each leg is identical and are place 90 degrees away from each other about the vertical center axis. 
+%% Pics -- type of joint movements
 
 This section describes the materials and components used for the quadruped named AquaShoko.
 
@@ -107,48 +105,45 @@ This section describes the materials and components used for the quadruped named
 
 
 \subsubsection{Frame}
-AquaShoko uses two Frame members to connect the four legs together. The first frame secures the Pod-Tops together and a second one securing the Pod Bottoms together. At the center of each Frame are attachment holes to which components, such as sensor packs and batteries, can be secured to if needed. Carbon fiber laminate was chosen for its high stiffness and height weight.
+AquaShoko uses two frame members to connect the four legs. The first frame secures the Pod-Tops together and a second one securing the Pod Bottoms together. Located at the center of each frame, mounting holes allow for the attachment of various components when necessary, such as sensor packs and batteries. Carbon fiber laminate was chosen for its high stiffness and light weight.
 
 \subsubsection{Horn-to-Horn}
-The Horn-To-Horn allows for the two Aquapods in closely to create a joint with two perpendicular degrees of freedom.
-6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+The Horn-To-Horn allows for the two Aquapods to create a joint with two perpendicular degrees of freedom in close proximity to one another. For its combined machniability, high strength, and low weight budget, 6061 Aluminum was the chosen material for this piece.
 
 \subsubsection{Horn-to-Tube}
-Horn-to-Tube allows the Horn Adaptor of the Aquapod to connect to a circular tube.
-6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+Horn-to-Tube allows the Horn Adaptor of the Aquapod to connect to a circular tube, also comprised of the favorable 6061 Aluminum.
 
 \subsubsection{Pod-Top-to-Tube}
 Pod-Top-to-Tube allows the Pod-Top of the Aquapod to connect to a circular tube.  
-6061 Aluminum was chosen for its combination of low weight, high strength, and machinability.
+%% 6061 Aluminum was chosen for its combination of low weight, high strength, and machinability. %%
 
 \subsubsection{Femur and Tibia}
-The Femur is a rod which connects the two pitch joints. The Tibia is the final link connected to the second pitch joint. Solid Nylon 6/6 rod in one inch on diameter was chosen for its high strength and low cost.
+The Femur is a rod which connects the two pitch joints. The Tibia is the final link connected to the second pitch joint. Solid Nylon 6/6 rod in one inch in diameter was chosen for both components based on its high strength and low cost.
 
 \subsubsection{Foot}
-Slip-on rubber feet to prevent wear on the Tibia and improve traction for walking. 
+Slip-on rubber feet are provided to prevent wear on the Tibia and improve traction for walking. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-exploded-leg.png}
-\caption{Exploded view of leg components:(a)Aquapod;(b)Horn-to-Horn;(c)Pod-Top-to-Tube;(d)Femur;(e)Horn-to-Tube;(f)Tibia;and (g)Foot}
+\caption{Exploded view of leg components: (a)Aquapod; (b)Horn-to-Horn; (c)Pod-Top-to-Tube; (d)Femur; (e)Horn-to-Tube; (f)Tibia; (g)Foot}
 \label{fig:leg exploded}
 \end{figure}
  
 
 \subsection{Power/Control Box}
-The Power/Control Box is built around a Nema 4X rated enclosure to protect contents from possible slashing which occur around pools. The Power/Control Box is comprised of a Raspberry Pi2, DYN2USB adapter, power block, emergency button, key switch, Four cable outputs one cable input, a 12v to 5v power supply, and two 20 amp fuses. The power control box accepts a 12v input from a dell 120v AC to 12v power source.
-The Raspberry can be connected to via local wifi network to operate. 
+The Power/Control Box is built around a Nema 4X rated enclosure to protect contents from possible splashing which occur around pools. The Power/Control Box is comprised of a Raspberry Pi2, DYN2USB adapter, power block, emergency button, key switch, four cable outputs, one cable input, a 12v to 5v power supply, and two 20amp fuses. The power control box accepts a 12v input from a dell 120v AC to 12v power source.
+The Raspberry can be connected to via local wifi network upon operational control. 
 A DYN2USB adapter is used to connect the Raspberry Pi2 USB serial output to the TTL Dynamixel. 
 The Power Block is used to distribute 12v power/ground to the cable outputs.
-The emergency stop button is slash down resistant; it is used to cut power to all cable outputs in case of emergency.
-The keyswitch switch is splash down resistant and is used to activate the dell power supply. The key switch prevents use of the robot by unauthorized persons. The 12v to 5v power source is used to power the Raspberry Pi2 and the TTL signal pull up resistor.
+The emergency stop button is splash down resistant, allowing for the user to manually enter emergency protocol, cutting all power supply to the cable outputs while continuing to provide power to the Raspberry Pi2.
+The keyswitch is splash down resistant and is used to activate the dell power supply. The key switch prevents all use of the robot by unauthorized persons. The 12v to 5v power source is used to power the Raspberry Pi2 and the TTL signal pull up resistor.
 The two 20amp fuses protect the actuators.
 
 
-
 \subsection{Power and Data Umbilical}
-Three contact continuous flex cable rated for 10 amp was used to daisy chain connect the actuators and build the umbilical. IP68/IP69k rated water proof connectors were used.
-The umbilical, which supplies power/grounds and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in abrasion resistant sleeving to protect the cables if the umbilical is dragged across the ground. Due to the high 1.1ohm resistance of the umbilical and lower power of the Pi2 a pull up resistor was required to establish reliable connection. 
+Three contact continuous flex cable rated for 10 amp are used to daisy chain connect the actuators and build the umbilical. %% IP68/IP69k rated water proof connectors were used. %%
+The umbilical, which supplies power/ground and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in an abrasion resistant sleeve to protect the cables if the umbilical from undesirable scraping. Due to the high 1.1ohm resistance of the umbilical and the lower power of the Pi2, a pull up resistor was required to establish reliable connection. 
 
 \begin{figure}[h]
 \centering
@@ -158,12 +153,12 @@ The umbilical, which supplies power/grounds and data connection to AquaShoko, is
 \end{figure}
 
 \subsection{Evaluating Maximum Joint Load Due To Gravity}
-It is required for AquaShoko to be capable to walking on dry land for shore to near shore use. The maximum torque load due to gravity will occur when the leg is posed so the center of mass and the first pitch both lie on the same plane normal to the gravity vector. 
+It is required for AquaShoko to possess the capability to walk across dry land for shore to near-shore use. The maximum torque load due to gravity will occur when the leg is posed so the center of mass and the first pitch both lie on the same plane normal to the gravity vector. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-legCOM.png}
-\caption{Maximum joint load on leg due to gravity:(a)Second pitch joint;(b)Calculated center of mass;(c)First pitch joint;(d)Direction of gravity;(e)Reaction torque}
+\caption{Maximum joint load on leg due to gravity: (a)Second pitch joint; (b)Calculated center of mass; (c)First pitch joint; (d)Direction of gravity; (e)Reaction torque}
 \label{fig:shoko 3dot2}
 \end{figure}
 
@@ -178,16 +173,194 @@ It is required for AquaShoko to be capable to walking on dry land for shore to n
     G & = 9.81 m/s^2    \\
 \end{align*}
 
-The torque on the first pitch joint was calculated to be 4.81Nm which is 57.3\% of the of the actuators stall torque at 12V. This result is favorable because full range of motion is maintained when AquaShoko is not submerged.
+The torque on the first pitch joint was calculated to be 4.81Nm, which is 57.3\% of the actuators stall torque at 12V. This result is favorable because full range of motion is maintained when AquaShoko is not submerged.
 
-\subsection{Finite Element Quadruped Structural Analysis}
+\subsection{Finite Element Structural Analysis}
 Finite element stress and strain analysis was used to study the performance capabilities of the quadruped design structure. 
 The following section will describe and discuss the results for structural studies done using Autodesk Fusion 360 simulation tool.
 
 \subsubsection{Effector Point Load With Leg In Stand Pose }
-It was desired to know how a leg posed in the standing position was subjected to a point load at the end effector. Using the stall torque of the actuator about the yaw joint a force of 24n was calculated and applied to the bottom of the the feet in the simulation. The Pod-Top of the yaw joint Aquapod was rigidly anchored. 
-Interfering bodies where removed from the simulation such as electrical connectors and fasteners. All contacts where assumed to be bonded and contact tolerance was set to 0.5mm.
+It was desired to know how a leg posed in the standing position was subjected to a point load at the end effector. Using the stall torque of the actuator about the yaw joint, a force of 24N was calculated and applied to the bottom of the feet in the simulation. The Pod-Top of the yaw joint Aquapod was rigidly anchored. 
+Interfering bodies where removed from the simulation, such as electrical connectors and fasteners. All contacts where assumed to be bonded and contact tolerance was set to 0.5mm.
+Solving the simulation yield the following results:
+ \begin{itemize}
+     \item Minimum factor of safety: 1.28
+     \item Maximum stress: 161.7 MPa (Von Mises)
+     \item Maximum deflection: 34.3mm
+ \end{itemize}
 
 
-\subsection{Validating Finite Element Analysis Results}
-Analytically engineering techniques where utilized to compare against the results of the finite element analysis. This was done to ensure the finite element result are within reasonable range of expected values.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-1.png}
+\caption{Effector Point Load With Leg In Stand Pose: Before Test; Minimum factor of safety }
+\label{fig:test two pressure check}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-2.png}
+\caption{Effector Point Load With Leg In Stand Pose: Von Mises stress; Deflection}
+\label{fig:test two pressure check}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-bearingOnly.png}
+\caption{Effector Point Load With Leg In Stand Pose; bearing results close up: Minimum factor of safety; Von Mises stress}
+\label{fig:test two pressure check}
+\end{figure}
+
+
+
+
+
+
+
+These initial results were alarming; the location of the minimum factor of safety was only a small section of the output shaft bearing. Whereas, hiding the ball bearing in the results yields the following:
+  \begin{itemize}
+     \item Minimum factor of safety: 2.535
+     \item Maximum stress: 108.5 MPa (Von Mises)
+     \item Maximum deflection: 34.3
+ \end{itemize}
+
+
+
+The analysis was conducted once again; however, the point load was rotated 180 degrees in order to test if the structure was more vulnerable depending on load direction.
+ \begin{itemize}
+     \item Minimum factor of safety: 1.28
+     \item Maximum stress: 161.7 MPa (Von Mises)
+     \item Maximum deflection: 34.3mm
+ \end{itemize}
+ 
+For thoroughness, the output shaft bearing was hidden, which yielded the following results:
+  \begin{itemize}
+     \item Minimum factor of safety: 2.535
+     \item Maximum stress: 108.5 MPa (Von Mises)
+     \item Maximum deflection: 34.3
+ \end{itemize}
+ 
+Rotating the point load direction made no difference to the results. 
+The results indicates the Output Shaft bearing successfully performing its job by taking the radial loads rather than the actuator. However, the plastic acetal bearing may not be strong enough to handle all loads the structure may be subjected to; however, this problem can be easily solved by changing to stainless steel bearings. 
+
+
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-1.png}
+\caption{Effector Point Load With Leg In Stand Pose, Load rotated and hidden bearing: Before Test; Minimum factor of safety }
+\label{fig:test two pressure check}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-2.png}
+\caption{Effector Point Load With Leg In Stand Pose, load rotated and hidden bearing: Von Mises stress; Deflection}
+\label{fig:test two pressure check}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Stand Pose Under Gravity}\label{sub:sub:Stand FEA} It was desired to know how the entire structure in standing pose will behave. In order to simulate this, a single leg was rigidly anchored, while the other three were constrained to friction-less anchors. Interfering bodies where removed from the simulation, such as electrical connectors and fasteners. All contacts where assumed to be bonded and contact tolerance was set to 0.5mm.
+Solving the simulation yielded the following results:
+ \begin{itemize}
+     \item Minimum factor of safety: 6.1
+     \item Maximum stress: 33.7 MPa (Von Mises)
+     \item Maximum deflection: 0.23 mm 
+ \end{itemize}
+ 
+This high minimum factor of safety result was favorable, proving the design is structurally sound for normal operating conditions. Similar to the results in~\ref{sub:sub:Leg FEA}, the minimum factor of safety was found to be the output shaft bearing of the second pitch joint.
+
+
+
+
+
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-1.png}
+\caption{Stand Pose Under Gravity: Before Test; Minimum factor of safety }
+\label{fig:test two pressure check}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-2.png}
+\caption{Stand Pose Under Gravity: Von Mises stress; Deflection}
+\label{fig:test two pressure check}
+\end{figure}
+
+\subsection{Moving mass stabilization}
+AquaShoko needs to be able to stabilize itself in water in order to land safely on the ground. However, unlike unmanned underwater vehicles it is not equipped with rudders, nor propellers which would be used stabilize the robot. Therefore, it relies on the moving mass concept in order to control the relative offset between the center of buoyancy (CoB) and the center of gravity (CoG), which is later used to stabilize the robot.
+
+Each Aquapod is designed to be neutrally buoyant w.r.t. the desired depth of operation, which implies that the force of gravity $\textbf{F}^G$ and buoyancy $\textbf{F}^B$ are equal for every Aquapod $i$:
+\begin{equation}\label{eq:equilibrium}
+\textbf{F}^B_i=\textbf{F}^G_i=m_i g \hat{\textbf{z}}_I, \forall i \in 1,...,12,
+\end{equation}
+with $\hat{\textbf{z}}_I$ denoting the unity vector in inertial frame, and $g$ is a standard gravity constant. Even though these forces are in equilibrium, Aquapods are constructed to have the CoG and CoB displaced for a constant vector $\boldsymbol{\Delta}\textbf{S}=[S_x, 0, S_z]^T$. Next we will derive the necessary equations showing how this displacement can be used to stabilize the quadruped.
+
+We start by deriving standard Denavit-Hartenberg parameters presented in Table \ref{tab:DHParameters} for a single leg shown in Fig \ref{fig:DHParameters}. Using these parameters allows us to write the transform matrices $\textbf{T}_0^i$ between the origin frame $L_0$ and each joint $i$ (i.e. Aquapod). Using the equilibrium assumption \eqref{eq:equilibrium} we write the equations for the center of mass $\textbf{p}_{CoM}$ and center of buoyancy $\textbf{p}_{CoB}$:
+\begin{equation}\label{eq:centersof}
+\textbf{p}_{CoM} = \frac{\sum_{i=1}^n m_i \textbf{p}_0^i}{\sum_{i=1}^n m_i},\textbf{p}_{CoB} = \frac{\sum_{i=1}^n m_i( \textbf{p}_0^i+\textbf{R}_0^i \boldsymbol{\Delta}\textbf{S})}{\sum_{i=1}^n m_i}.
+\end{equation} 
+In \eqref{eq:centersof} we used $\textbf{p}_0^i$ and $\textbf{R}_0^i$ to denote translation and rotation component of $\textbf{T}_0^i$.
+
+\begin{table}[!t]
+	\centering
+	\caption{{Standard (Paul)} Denavit-Hartenberg Parameters for a single leg shown in Fig. \ref{fig:DHParameters}.}\label{tab:DHParameters}
+	\begin{tabular}{ccccc}
+		Link & $\theta$ & $d$ & $a$ & $\alpha$ \\\hline
+		$L_0$ & $q_1$ & $0$ & $a_1$ & $0$\\
+		$L_1$ & $q_2$ & $d_2$ & $0$ & $\frac{\pi}{2}$\\
+		$L_2$ & $q_3$ & $0$ & $a_3$ & $0$\\
+		$L_3$ & $q_4$ & $0$ & $a_4$ & $0$
+	\end{tabular}
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{./img/DHParameters.png}
+	\caption{Enlarged view of a single arm showing the links and joints used for DH parametrization. First joint $q_1$ represents the orientation of each leg and is therefore not a degree of freedom but rather a parameter of construction.}
+	\label{fig:DHParameters}
+\end{figure}
+
+With the total of $n=12$ degrees of freedom (DOF), the complexity of the control increases beyond comprehension. However, one should note that joint $q_{i,4}$ does not affect the CoG or CoB of $i$-th leg, which lowers the problem to 8 DOF. In order to simplify the control even further, we draw our inspiration from standard quadrotor control, coupling the opposing joints as shown in the following equation,
+\begin{gather}
+q_{2,1}=-q_{2,3} = u_1 \;\;\;\;\;
+q_{2,2}=-q_{2,4} = u_2  \\ \nonumber
+q_{3,1}=-q_{3,3} = u_3 \;\;\;\;\;
+q_{3,2}=-q_{3,4} = u_4. 
+\end{gather}
+
+Using the aforementioned simplification through \eqref{eq:centersof} enables one to derive the necessary vector difference between the CoG and CoB, $\boldsymbol{\Delta}\textbf{p} = \textbf{p}_{CoG}-\textbf{p}_{CoB}$:
+\begin{gather}
+\boldsymbol{\Delta}\textbf{p}|_x = \frac{-2}{3}\left( 2 S_z \textup{sin}(u_1)+S_x (1+\textup{cos}(u_3))\textup{sin}(u_2) \right )\\ \nonumber
+\boldsymbol{\Delta}\textbf{p}|_y = \frac{-2}{3}\left( 2 S_z \textup{sin}(u_2)+S_x (1+\textup{cos}(u_4))\textup{sin}(u_1) \right )\\ \nonumber
+\boldsymbol{\Delta}\textbf{p}|_z = \frac{4 S_z}{3} 
+\end{gather}
+
+Since $\boldsymbol{\Delta}\textbf{p}$ is now a function of only four degrees of freedom $\textbf{u}=[u_1,u_2,u_3, u_4]^T$, it allows us to write a reduced $4 \times 3$ Jacobian matrix $\textbf{J}=\frac{\boldsymbol{\partial \Delta}\textbf{p}}{\partial \textbf{u}}$. By controlling the relative distance between the CoG and CoB, one can control the torque applied to the body and in turn stabilize the quadruped, as shown in Fig \ref{fig:RestoreTorque}. To derive the necessary equations describing the dynamics of attitude control, we adopt the standard small angle assumption and approximation, neglect the second order dynamics and assume the motion of the quadruped and the joints is slow. These are reasonable assumptions, given that the robot operates in a fluid. With these simplifications in mind we write the first order approximation nonlinear dynamic vector equation:
+
+%\subsection{Dual arm planar manipulator}
+\begin{equation}\label{eq:finalDyn}
+\frac{\partial^\Omega}{\partial t}\textbf{I}_s^c\boldsymbol{\Omega}  = {\boldsymbol{\Delta}\textbf{p}}(\textbf{u}) \times \textbf{g}{\sum_{i=1}^n m_i } 
+\end{equation}
+
+In \eqref{eq:finalDyn} we introduced the $3 \times 3$ inertia tensor, viewed w.r.t. CoG. Even though this model neglects various dynamic effects, it demonstrates how one controls the attitude of the robot using its own degrees of freedom. One can show that a standard PID controller can be used to stabilize the vehicle (\cite{Haus2017}), however this goes beyond the scope of this paper.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{./img/RestoreTorque.png}
+	\caption{The relative distance between the CoG (black sphere) and CoB (orange sphere) can provide turning torque to recover the robot. By controlling this relative distance, one can ultimately stabilize the robot before it touches the bottom. }
+	\label{fig:RestoreTorque}
+\end{figure}
