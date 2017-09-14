@@ -4,7 +4,7 @@ rm *.log
 rm *.blg
 rm *.out
 
-thefile=dlofaro-humanoids-2017-mds-ach
+thefile=icra-2018-aqua-shoko
 pdflatex $thefile.tex
 bibtex $thefile.aux
 pdflatex $thefile.tex
