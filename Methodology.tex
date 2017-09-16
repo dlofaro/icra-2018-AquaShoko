@@ -133,9 +133,32 @@ The keyswitch is splash down resistant and is used to activate the dell power su
 The two 20 Amp fuses protect the actuators.
 
 
-\subsection{Power and Data Umbilical}
+\subsection{Power, Data Umbilical, and Middleware}
 Three contact continuous flex cable rated for 10 Amp are used to daisy chain connect the actuators and build the umbilical. %% IP68/IP69k rated water proof connectors were used. %%
 The umbilical, which supplies power/ground and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in an abrasion resistant sleeve to protect the cables if the umbilical from undesirable scraping. Due to the high 1.1 Ohm resistance of the umbilical and the lower power of the Pi2, a pull up resistor was required to establish reliable connection. 
+
+The middleware used for the control system is a high-speed low-latency process based system compatible with the \textit{x-Ach} family of controllers.  The \textit{x-Ach} controllers have been used on multiple high degree of freedom robotics systems including the DRC-Hubo and the Mobile Dexterous Social (MDS) Robot by Xitome Design \cite{lofaro-2015-ieee-ram-hubo-ach,lofaro-2017-ieee-humanoids-mds-ach}.
+This system is open source and is called \textit{Shoko-Ach}.
+\textit{Shoko-Ach} is available at \texttt{https://github.com/thedancomplex/shoko-ach}
+
+
+\subsection{Simulation using ODE and Gazebo}
+A simulated version of the robot has been made from the CAD model.
+All length, widths, thicknesses, densities, etc. were used when creating the model.
+The simulated robot runs in Gazebo Sim \cite{gazebo} and uses the Open Dynamics Engine (ODE) as its solver \cite{ode:2008}.
+The simulation model can be seen in Figure~\ref{fig:gazebo}.
+This model is OpenSource and can be found at \tiny \texttt{https://github.com/thedancomplex/AquaShoko-Gazebo}\normalsize{}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/AquaShoko-Sim-c.jpg}
+\caption{Simulation of the AquaShoko Robot using Gazebo Sim and ODE.}
+\label{fig:gazebo}
+\end{figure}
+
+
+
+
 
 \begin{figure}
 \centering
@@ -151,11 +174,11 @@ It is required for AquaShoko to possess the capability to walk across dry land f
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-legCOM.png}
 \caption{Maximum joint load on leg due to gravity: (a)Second pitch joint; (b)Calculated center of mass; (c)First pitch joint; (d)Direction of gravity; (e)Reaction torque}
-\label{fig:shoko 3dot2}
+\label{fig:shoko 3dot2-2}
 \end{figure}
 
 
-\begin{align}\label{eq:head}
+\begin{align}\label{eq:head-1}
     T = FL   \\
     F = MG
 \end{align}
@@ -171,7 +194,7 @@ The torque on the first pitch joint was calculated to be 4.81Nm, which is 57.3\%
 Finite element stress and strain analysis (FEA) was used to study the performance capabilities of the quadruped design structure. 
 The following section will describe and discuss the results for structural studies done using Autodesk Fusion 360 simulation tool.
 
-\subsubsection{Effector Point Load With Leg In Stand Pose } %reference image
+\subsubsection{Effector Point Load With Leg In Stand Pose }\label{sub:sub:Leg FEA} %reference image
 FEA was used to analyze how a leg in the standing position would react to a point load placed at the end effector. Using the stall torque of the actuator about the yaw joint, a force of 24N was calculated and applied to the bottom of the feet in the simulation. The Pod-Top of the yaw joint Aquapod was rigidly anchored. 
 Interfering bodies were removed from the simulation, such as electrical connectors and fasteners. All contacts were assumed to be bonded and contact tolerance was set to 0.5mm.
 Solving the simulation yield the following results:
@@ -289,10 +312,11 @@ This high minimum factor of safety result was favorable, proving the design is s
 \centering
 \includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-2.png}
 \caption{Stand Pose Under Gravity: Von Mises stress; Deflection}
-\label{fig:test two pressure check}
+\label{fig:PressureCheck2}
 \end{figure}
 
-\subsection{Moving mass stabilization}
+
+\subsection{Moving mass stabilization}\label{sec:stable}
 AquaShoko needs to be able to stabilize itself in water in order to land safely on the ground. However, unlike unmanned underwater vehicles it is not equipped with rudders, nor propellers which would be used stabilize the robot. Therefore, it relies on the moving mass concept in order to control the relative offset between the center of buoyancy (CoB) and the center of gravity (CoG), which is later used to stabilize the robot.
 
 Each Aquapod is designed to be neutrally buoyant w.r.t. the desired depth of operation, which implies that the force of gravity $\textbf{F}^G$ and buoyancy $\textbf{F}^B$ are equal for every Aquapod $i$:
