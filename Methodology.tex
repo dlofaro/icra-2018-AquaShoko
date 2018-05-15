@@ -1,6 +1,3 @@
-
-
-
 \subsection{IP68 Waterproof Enclosure}
 An Aquapod is a waterproof enclosure designed to house an MX-106 actuator that creates a revolute joint. An Aquapod is a platform used to build submersible robotic structures.
 Requirements: 
@@ -79,7 +76,7 @@ Screws comprised of 18-8 stainless steel were chosen for their corrosion resista
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-render-standPose.png}
+\includegraphics[width=1.0\columnwidth]{./img/shokopose.png}
 \caption{Rendering of AquaShoko Version 3.3 standing pose}
 \label{fig:shoko stand pose}
 \end{figure}
@@ -128,18 +125,18 @@ The Power/Control Box is built around a Nema 4X rated enclosure to protect conte
 The Raspberry can be connected to via local wifi network upon operational control. 
 A DYN2USB adapter is used to connect the Raspberry Pi2 USB serial output to the TTL Dynamixel. 
 The Power Block is used to distribute 12V power/ground to the cable outputs.
-The emergency stop button is splash down resistant, allowing for the user to manually enter emergency protocol, cutting all power supply to the cable outputs while continuing to provide power to the Raspberry Pi2.
+The emergency stop button is splash down resistant, allowing for the user to manually enter emergency protocol, cutting all power supply to the cable outputs while continuing to provide power to the single board computer.
 The keyswitch is splash down resistant and is used to activate the dell power supply. The key switch prevents all use of the robot by unauthorized persons. The 12V to 5V power source is used to power the Raspberry Pi2 and the TTL signal pull up resistor.
 The two 20 Amp fuses protect the actuators.
 
 
 \subsection{Power, Data Umbilical, and Middleware}
 Three contact continuous flex cable rated for 10 Amp are used to daisy chain connect the actuators and build the umbilical. %% IP68/IP69k rated water proof connectors were used. %%
-The umbilical, which supplies power/ground and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in an abrasion resistant sleeve to protect the cables if the umbilical from undesirable scraping. Due to the high 1.1 Ohm resistance of the umbilical and the lower power of the Pi2, a pull up resistor was required to establish reliable connection. 
+The umbilical, which supplies power/ground and data connection to AquaShoko, is approximately 12 meters long and uses two cables. The umbilical is wrapped in an abrasion resistant sleeve to protect the cables if the umbilical from undesirable scraping. Due to the high 1.1 Ohm resistance of the umbilical and the lower power of the single-board computer, a pull up resistor was required to establish reliable connection. 
 
-The middleware used for the control system is a high-speed low-latency process based system compatible with the \textit{x-Ach} family of controllers.  The \textit{x-Ach} controllers have been used on multiple high degree of freedom robotics systems including the DRC-Hubo and the Mobile Dexterous Social (MDS) Robot by Xitome Design \cite{lofaro-2015-ieee-ram-hubo-ach,lofaro-2017-ieee-humanoids-mds-ach}.
+The middleware used for the control system is a high-speed low-latency process based system compatible with the \textit{x-Ach} family of controllers.  The \textit{x-Ach} controllers have been used on multiple high degree of freedom robotics systems including the DRC-Hubo and the Mobile Dexterous Social (MDS) Robot by Xitome Design \cite{lofaro-2015-ieee-ram-hubo-ach,lofaro-2018-ieee-amc-legacy-robots}.
 This system is open source and is called \textit{Shoko-Ach}.
-\textit{Shoko-Ach} is available at \texttt{https://github.com/thedancomplex/shoko-ach}
+\textit{Shoko-Ach} is available in \cite{shokoACH}. 
 
 
 \subsection{Simulation using ODE and Gazebo}
@@ -147,7 +144,7 @@ A simulated version of the robot has been made from the CAD model.
 All length, widths, thicknesses, densities, etc. were used when creating the model.
 The simulated robot runs in Gazebo Sim \cite{gazebo} and uses the Open Dynamics Engine (ODE) as its solver \cite{ode:2008}.
 The simulation model can be seen in Figure~\ref{fig:gazebo}.
-This model is OpenSource and can be found at \tiny \texttt{https://github.com/thedancomplex/AquaShoko-Gazebo}\normalsize{}
+This model is OpenSource and can be found in \cite{AquashokoGazebo}.
 
 \begin{figure}[!t]
 \centering
@@ -179,14 +176,10 @@ It is required for AquaShoko to possess the capability to walk across dry land f
 
 
 \begin{align}\label{eq:head-1}
-    T = FL   \\
-    F = MG
-\end{align}
-\begin{align*}
     L & = 0.271 m         \\
-    M & = 1.81 kg       \\
-    G & = 9.81 m/s^2    \\
-\end{align*}
+    m & = 1.81 kg       
+\end{align}
+
 
 The torque on the first pitch joint was calculated to be 4.81Nm, which is 57.3\% of the actuators stall torque at 12V. This result is favorable because full range of motion is maintained when AquaShoko is not submerged.
 
@@ -209,17 +202,12 @@ Solving the simulation yield the following results:
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-1.png}
-\caption{Effector Point Load With Leg In Stand Pose: Before Test; Minimum factor of safety }
-\label{fig:FEA EE factor of safety}
+\includegraphics[width=0.48\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-1.png}\hspace{0.04\columnwidth}\includegraphics[width=0.48\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-2.png}
+\caption{(LEFT) End-Effector Point Load With Leg In Stand Pose: Before Test; Minimum factor of safety. (RIGHT) End-Effector Point Load With Leg In Stand Pose: Von Mises stress; Deflection.}
+\label{fig:FEA EE factor of safety}\label{fig:FEA EE defection}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-WithBearing-2.png}
-\caption{Effector Point Load With Leg In Stand Pose: Von Mises stress; Deflection}
-\label{fig:FEA EE defection}
-\end{figure}
+
 
 \begin{figure}
 \centering
@@ -264,17 +252,12 @@ The results indicates the Output Shaft bearing successfully performing its job b
  
 \begin{figure}
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-1.png}
-\caption{Effector Point Load With Leg In Stand Pose, Load rotated and hidden bearing: Before Test; Minimum factor of safety }
-\label{fig:FEA EE factor of safety no bearing}
+\includegraphics[width=0.48\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-1.png}\hspace{0.04\columnwidth}\includegraphics[width=0.48\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-2.png}
+\caption{(LEFT) End-Effector Point Load With Leg In Stand Pose, Load rotated and hidden bearing: Before Test; Minimum factor of safety. (RIGHT) End-Effector Point Load With Leg In Stand Pose, load rotated and hidden bearing: Von Mises stress; Deflection}
+\label{fig:FEA EE factor of safety no bearing}\label{fig:FEA EE defection no bearing}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-HidenBearing-2.png}
-\caption{Effector Point Load With Leg In Stand Pose, load rotated and hidden bearing: Von Mises stress; Deflection}
-\label{fig:FEA EE defection no bearing}
-\end{figure}
+
 
 
 

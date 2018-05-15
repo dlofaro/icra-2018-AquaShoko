@@ -1,10 +1,11 @@
 
+
 \subsection{Aquapod water resistance testing}
 
 
 \subsubsection{Shallow Submersion Test}
 Test the water resistance of Aquapod in a shallow body of water.
-Aquapod V3.1, without an actuator installed, was left in a 5 gallon bucket filled with tap water for a duration of 23/6/2017 12:30PM to 25/6/2017 12:30PM. 
+Aquapod V3.1, without an actuator installed, was left in a 5 gallon bucket filled with tap water for a duration of 48 hours. 
 No evidence of water ingress into the Aquapod nor electrical connectors; concluding a successful shallow submersion test.
 
 Shallow Submersion Test observations:
@@ -19,10 +20,11 @@ Shallow Submersion Test observations:
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaPod-test-rust-no-rust-s.pdf}
+\includegraphics[width=1.0\columnwidth]{img/rust.png}
 \caption{(LEFT)Aquapod version 3.1 after first water resistance test, note the presence of rust.  (RIGHT)Aquapod version 3.1 moments after submersion, note the absence of rust.}
 \label{fig:pod in bucket}\label{fig:pod rust}
 \end{figure}
+
 
 
 
@@ -33,15 +35,11 @@ Aquapods are expected to function reliably at a depth of 3m. A pressure chamber 
 \begin{equation}\label{eq:head}
     P = \rho g h \\
 \end{equation}
-\begin{align*}
-    P & = \text{Gauge Pressure}  \\
-    \rho & = 1000 kg/m^3 \\
-    g & = 9.81 m/s^2 \\
-    h & = depth  \\
-\end{align*}
+
+\noindent where P is gague pressure, $\rho$ is $1000 kg/m^3$, g is gravity, and h is the depth.
 
 A factor of safety of 2.5 or higher is desired for water resistance. A minimum pressure benchmark for a successful test was calculated to be 73.6kPa (10.7psi), which simulates a depth of 7.5m.
-The test took place on 27/6/2017 from 11:30am to 4:00pm, which are the respective times of pressurization and depressurization.
+The test took place over a 5 hour time span.
 The pressure chamber was filled with tap water, and then the Aquapod V3.1, without an actuator installed, was submerged inside.
 The source air pressure was initially adjusted to 241kPa (35psi) gauge and used initial pressurization of the chamber.
 The source air was disconnected from the chamber and a gauge was used to measure the pressure inside the chamber to be 103kPa (15psi). 
@@ -69,7 +67,28 @@ Low pressure chamber test observations:
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaPod-test-two-pressureCheck.JPG}
+\includegraphics[width=0.75\columnwidth]{./img/aquaPod-test-two-pressureCheck.JPG}
 \caption{Chamber internal gauge pressure during low pressure chamber test}
 \label{fig:test two pressure check-1}
+\end{figure}
+
+\subsubsection{Physical Robot Underwater Test}
+The physical robot was then tested for its ability to operate underwarter.  
+Figure~\ref{fig:underwarter} shows the test of the robot running the body orientation algorithm defined in \ref{sec:stable}.
+The depth of the robot is approximately 1.5 $m$.
+The robot was tested for 1 hours continuously underwarter.
+Figure~\ref{fig:video} is a link to the video for the AquaShoko test depicted in Figure~\ref{fig:underwarter} on the real robot under 1.5 $m$ of water.
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{./img/qr.jpg}
+\caption{Video of AquaShoko being tested running the controller in \ref{sec:stable} under 1.5 $m$ of water.}
+\label{fig:video}
 \end{figure}
