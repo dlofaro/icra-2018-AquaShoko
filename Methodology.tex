@@ -89,7 +89,7 @@ AquaShoko is a quadruped built around the Aquapod platform, which is submersible
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-exploded-leg.png}
+\includegraphics[width=0.7\columnwidth]{./img/aquaShoko-v3dot3-exploded-leg.png}
 \caption{Exploded view of leg components: (a)Aquapod; (b)Horn-to-Horn; (c)Pod-Top-to-Tube; (d)Femur; (e)Horn-to-Tube; (f)Tibia; (g)Foot}
 \label{fig:leg exploded}
 \end{figure}
@@ -146,23 +146,23 @@ The simulated robot runs in Gazebo Sim \cite{gazebo} and uses the Open Dynamics 
 The simulation model can be seen in Figure~\ref{fig:gazebo}.
 This model is OpenSource and can be found in \cite{AquashokoGazebo}.
 
+
+
+
+
+
 \begin{figure}[!t]
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/AquaShoko-Sim-c.jpg}
-\caption{Simulation of the AquaShoko Robot using Gazebo Sim and ODE.}
-\label{fig:gazebo}
+\includegraphics[width=0.65\columnwidth]{./img/AquaShoko-Sim-c.jpg}\includegraphics[width=0.35\columnwidth]{./img/aquaShoko-v3dot2-photo-complete.JPG}
+\caption{(LEFT) Simulation of the AquaShoko Robot using Gazebo Sim and ODE. (RIGHT) AquaShoko version 3.2 complete assembly}
+\label{fig:gazebo}\label{fig:shoko 3dot2}
 \end{figure}
 
 
 
 
 
-\begin{figure}
-\centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot2-photo-complete.JPG}
-\caption{AquaShoko version 3.2 complete assembly }
-\label{fig:shoko 3dot2}
-\end{figure}
+
 
 \subsection{Evaluating Maximum Joint Load Due To Gravity}
 It is required for AquaShoko to possess the capability to walk across dry land for shore or near-shore use. The maximum torque load due to gravity will occur when the leg is posed so that the center of mass and the first pitch both lie on the same plane, normal to the gravity vector. 
@@ -286,17 +286,12 @@ This high minimum factor of safety result was favorable, proving the design is s
  
 \begin{figure}
 \centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-1.png}
-\caption{Stand Pose Under Gravity: Before Test; Minimum factor of safety }
-\label{fig:test two pressure check}
+\includegraphics[width=0.5\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-1.png}\includegraphics[width=0.5\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-2.png}
+\caption{(LEFT) Stand Pose Under Gravity: Before Test; Minimum factor of safety.  (RIGHT) Stand Pose Under Gravity: Von Mises stress; Deflection }
+\label{fig:test two pressure check}\label{fig:PressureCheck2}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=1.0\columnwidth]{./img/aquaShoko-v3dot3-FEA-Standing-2.png}
-\caption{Stand Pose Under Gravity: Von Mises stress; Deflection}
-\label{fig:PressureCheck2}
-\end{figure}
+
 
 
 \subsection{Moving mass stabilization}\label{sec:stable}
@@ -326,9 +321,9 @@ In \eqref{eq:centersof}  $\textbf{p}_0^i$ and $\textbf{R}_0^i$ are used to denot
 	\end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{./img/DHParameters.pdf}
+	\includegraphics[width=0.8\columnwidth]{./img/DHParameters.pdf}
 	\caption{Enlarged view of a single arm showing the links and joints used for DH parametrization. First joint $q_1$ represents the orientation of each leg and is therefore not a degree of freedom but rather a parameter of construction.}
 	\label{fig:DHParameters}
 \end{figure}
